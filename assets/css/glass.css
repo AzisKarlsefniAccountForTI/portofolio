@@ -1,0 +1,78 @@
+/* efek pantulan cahaya sudut kiri atas */
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 15% 0%,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 60%
+  );
+  pointer-events: none;
+  border-radius: inherit;
+  mix-blend-mode: overlay;
+}
+
+/* efek frosted glass bertekstur */
+.glass-panel,
+.glass-header {
+  box-shadow: 
+    0 16px 36px 0 rgba(15, 23, 42, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px 0 rgba(15, 23, 42, 0.1);
+}
+
+/* fisika pantulan & bayangan bola 3d */
+.glass-sphere {
+  box-shadow: 
+    inset -8px -8px 18px rgba(30, 58, 138, 0.5),
+    inset 6px 6px 12px rgba(255, 255, 255, 0.95),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.4),
+    0 18px 32px rgba(15, 23, 42, 0.28);
+  filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.2));
+}
+
+/* kilau spesifik bola kaca saat hover hero */
+.hero-section:hover .glass-sphere {
+  filter: drop-shadow(0 12px 20px rgba(56, 189, 248, 0.35));
+  transition: filter 0.4s ease;
+}
+
+/* border kilap dinamis kartu proyek saat kursor aktif */
+.interactive-card:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 
+    0 22px 48px 0 rgba(15, 23, 42, 0.32),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* highlight kartu pilihan / sertifikat */
+.highlight-card {
+  box-shadow: 
+    0 18px 40px 0 rgba(37, 99, 235, 0.25),
+    inset 0 1px 2px 0 rgba(147, 197, 253, 0.5);
+}
+
+.highlight-card:hover {
+  box-shadow: 
+    0 24px 50px 0 rgba(56, 189, 248, 0.35),
+    inset 0 1px 3px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* efek tombol aksi kaca */
+.btn-glass {
+  box-shadow: 
+    0 4px 14px rgba(15, 23, 42, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.btn-glass:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 8px 20px rgba(15, 23, 42, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
