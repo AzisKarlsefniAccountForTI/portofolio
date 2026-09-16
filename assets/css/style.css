@@ -400,7 +400,6 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.23);
 }
 
@@ -497,4 +496,10 @@ body {
   .hero-section h1 { font-size: 2rem; }
   .main-container { gap: 48px; }
   .cursor-glow { display: none; }
+
+  /* tombol email & github dibuat lebih ramping di layar HP */
+  .btn-github-nav {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
 }
